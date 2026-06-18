@@ -1,0 +1,112 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+:root {
+  --bg-color: #f8f9fa;
+  --surface: #ffffff;
+  --text-color: #212529;
+  --muted: #6c757d;
+  --border: rgba(33, 37, 41, 0.12);
+  --card: #ffffff;
+  --shadow-color: 0 0 0 / 0.08;
+}
+
+html[data-theme='dark'] {
+  --bg-color: #12151b;
+  --surface: #1b212a;
+  --text-color: #e9ecef;
+  --muted: #c1c8d2;
+  --border: rgba(233, 236, 239, 0.12);
+  --card: #171f2b;
+  --shadow-color: 0 0 0 / 0.3;
+}
+
+.app-shell {
+  background: radial-gradient(circle at top left, rgba(56, 103, 214, 0.16), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(15, 185, 177, 0.12), transparent 28%);
+}
+
+.container {
+  max-width: 1180px;
+}
+
+.page-title h1 {
+  font-weight: 700;
+}
+
+.card, .modal-content {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  background-color: #2753ff;
+  border-color: #2753ff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1f45d4;
+  border-color: #1f45d4;
+}
+
+.form-control,
+.form-select,
+textarea {
+  background-color: var(--surface);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: #2753ff;
+  box-shadow: 0 0 0 0.15rem rgba(39, 83, 255, 0.18);
+}
+
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+.section-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6c757d;
+}
+
+.question-card {
+  border: 1px solid rgba(39, 83, 255, 0.14);
+}
+
+.question-card .card-header {
+  background-color: rgba(39, 83, 255, 0.05);
+}
+
+.badge-status {
+  font-size: 0.85rem;
+}
+
+.spinner-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(15, 23, 42, 0.35);
+  display: grid;
+  place-items: center;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .page-title {
+    text-align: center;
+  }
+}
